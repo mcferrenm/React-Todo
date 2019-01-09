@@ -62,7 +62,11 @@ class App extends React.Component {
 
   clearCompleted = event => {
     event.preventDefault();
-    console.log(123);
+    const copyTodos = this.state.todosData.filter(todo => !todo.completed);
+
+    this.setState({
+      todosData: copyTodos
+    });
   };
 
   render() {
