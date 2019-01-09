@@ -38,7 +38,7 @@ class App extends React.Component {
         ...this.state.todosData,
         {
           task: this.state.inputText,
-          id: Math.random(),
+          id: Math.floor(Math.random() * 10 ** 13),
           completed: false
         }
       ],
