@@ -5,7 +5,7 @@ const TodoList = props => {
   return (
     <ul>
       {props.todosData.map(todo => {
-        return <Todo todo={todo} />;
+        return <Todo key={todo.id} todo={todo} />;
       })}
     </ul>
   );
