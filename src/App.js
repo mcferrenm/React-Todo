@@ -1,5 +1,7 @@
 import React from "react";
 
+import TodoList from "./components/TodoComponents/TodoList";
+
 const todos = [
   {
     task: "Organize Garage",
@@ -24,11 +26,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>Todo List: MVP</h2>
-        <ul>
-          {this.state.todosData.map(todo => {
-            return <li>{todo.task}</li>;
-          })}
-        </ul>
+        <TodoList todosData={this.state.todosData} />
       </div>
     );
   }
