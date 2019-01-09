@@ -31,8 +31,8 @@ class App extends React.Component {
     });
   };
 
-  setNewTodoItem = e => {
-    e.preventDefault();
+  setNewTodoItem = event => {
+    event.preventDefault();
     this.setState({
       todosData: [
         ...this.state.todosData,
@@ -46,11 +46,21 @@ class App extends React.Component {
     });
   };
 
+  toggleCompleted = event => {
+    // this.setState({
+    //   todosData: [...this.state.todosData]
+    // });
+    console.log(event.target);
+  };
+
   render() {
     return (
       <div>
         <h2>Todo List: MVP</h2>
-        <TodoList todosData={this.state.todosData} />
+        <TodoList
+          todosData={this.state.todosData}
+          toggleCompleted={this.toggleCompleted}
+        />
         <TodoForm
           handleChange={this.handleChange}
           inputText={this.state.inputText}
