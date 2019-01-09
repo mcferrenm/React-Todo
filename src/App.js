@@ -31,6 +31,20 @@ class App extends React.Component {
     });
   };
 
+  setNewTodoItem = e => {
+    e.preventDefault();
+    this.setState({
+      todosData: [
+        ...this.state.todosData,
+        {
+          task: this.state.inputText,
+          id: Math.random(),
+          completed: false
+        }
+      ]
+    });
+  };
+
   render() {
     return (
       <div>
@@ -39,6 +53,7 @@ class App extends React.Component {
         <TodoForm
           handleChange={this.handleChange}
           inputText={this.state.inputText}
+          setNewTodoItem={this.setNewTodoItem}
         />
       </div>
     );
