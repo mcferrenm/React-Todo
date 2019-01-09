@@ -58,8 +58,11 @@ class App extends React.Component {
     this.setState({
       todosData: copyTodos
     });
+  };
 
-    console.log(this.state.todosData);
+  clearCompleted = event => {
+    event.preventDefault();
+    console.log(123);
   };
 
   render() {
@@ -74,6 +77,7 @@ class App extends React.Component {
           handleChange={this.handleChange}
           inputText={this.state.inputText}
           setNewTodoItem={this.setNewTodoItem}
+          clearCompleted={this.clearCompleted}
         />
       </div>
     );

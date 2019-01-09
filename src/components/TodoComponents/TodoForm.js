@@ -10,6 +10,7 @@ const TodoForm = props => {
         onChange={props.handleChange}
       />
       <button onClick={props.setNewTodoItem}>Add Todo</button>
+      <button onClick={props.clearCompleted}>Clear Completed</button>
     </form>
   );
 };
