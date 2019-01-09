@@ -41,7 +41,8 @@ class App extends React.Component {
           id: Math.random(),
           completed: false
         }
-      ]
+      ],
+      inputText: ""
     });
   };
 
