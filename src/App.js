@@ -47,10 +47,19 @@ class App extends React.Component {
   };
 
   toggleCompleted = event => {
-    // this.setState({
-    //   todosData: [...this.state.todosData]
-    // });
-    console.log(event.target);
+    const copyTodos = this.state.todosData;
+
+    copyTodos.forEach(todo => {
+      if (todo.id === parseInt(event.target.id, 10)) {
+        todo.completed = !todo.completed;
+      }
+    });
+
+    this.setState({
+      todosData: copyTodos
+    });
+
+    console.log(this.state.todosData);
   };
 
   render() {
