@@ -4,13 +4,13 @@
   justify-content: space-between;
 }
 
-input[type="text"] {
+.form input[type="text"] {
   padding: 1rem;
   font-size: 2rem;
   flex-grow: 4;
 }
 
-button {
+.form button {
   padding: 1rem;
   font-size: 2rem;
   flex-grow: 1;

@@ -79,9 +79,12 @@ class App extends React.Component {
         <div className="header">
           <h2>Todo List:</h2>
           <h3>Stretch</h3>
+          <TodoSearch />
+          <span role="img" className="eyes">
+            👀
+          </span>
         </div>
         <div className="body">
-          <TodoSearch />
           <TodoForm
             handleChange={this.handleChange}
             inputText={this.state.inputText}
@@ -92,9 +95,6 @@ class App extends React.Component {
             todosData={this.state.todosData}
             toggleCompleted={this.toggleCompleted}
           />
-          <span role="img" className="eyes">
-            👀
-          </span>
         </div>
       </div>
     );
