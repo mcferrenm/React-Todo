@@ -2,6 +2,7 @@ import React from "react";
 
 import TodoList from "./components/TodoComponents/TodoList";
 import TodoForm from "./components/TodoComponents/TodoForm";
+import TodoSearch from "./components/TodoComponents/TodoSearch";
 
 import "./app.css";
 
@@ -80,6 +81,7 @@ class App extends React.Component {
           <h3>Stretch</h3>
         </div>
         <div className="body">
+          <TodoSearch />
           <TodoForm
             handleChange={this.handleChange}
             inputText={this.state.inputText}
@@ -90,7 +92,9 @@ class App extends React.Component {
             todosData={this.state.todosData}
             toggleCompleted={this.toggleCompleted}
           />
-          <span className="eyes">👀</span>
+          <span role="img" className="eyes">
+            👀
+          </span>
         </div>
       </div>
     );
