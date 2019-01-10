@@ -24,7 +24,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       todosData: todos,
-      inputText: ""
+      inputText: "",
+      searchInputText: ""
     };
   }
 
@@ -66,16 +67,10 @@ class App extends React.Component {
 
   clearCompleted = event => {
     event.preventDefault();
-    const copyTodos = this.state.todosData.filter(todo => !todo.completed);
 
     this.setState({
-      todosData: copyTodos
+      todosData: this.state.todosData.filter(todo => !todo.completed)
     });
-  };
-
-  handleFilterList = () => {
-    // control input field values
-    console.log(123);
   };
 
   render() {
@@ -85,7 +80,7 @@ class App extends React.Component {
           <h2>Todo List:</h2>
           <h3>Stretch</h3>
           <TodoSearch
-            handleFilterList={this.handleFilterList}
+            handleChange={this.handleChange}
             searchInputText={this.state.searchInputText}
           />
           <span role="img" className="eyes">
@@ -102,6 +97,7 @@ class App extends React.Component {
           <TodoList
             todosData={this.state.todosData}
             toggleCompleted={this.toggleCompleted}
+            searchInputText={this.state.searchInputText}
           />
         </div>
       </div>

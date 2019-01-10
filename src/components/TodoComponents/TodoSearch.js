@@ -6,9 +6,9 @@ const TodoSearch = props => {
   return (
     <input
       name="searchInputText"
-      onChange={props.handleFilterList}
       type="text"
       placeholder="Search todos"
+      onChange={props.handleChange}
     />
   );
 };
