@@ -1,12 +1,19 @@
 import React from "react";
 
+import "./Todo.css";
+
 const Todo = props => {
   const lineThrough = props.todo.completed
-    ? { textDecoration: "line-through" }
+    ? { textDecoration: "line-through", color: "#9E9E9E" }
     : null;
 
   return (
-    <li style={lineThrough} id={props.todo.id} onClick={props.toggleCompleted}>
+    <li
+      className="todo"
+      style={lineThrough}
+      id={props.todo.id}
+      onClick={props.toggleCompleted}
+    >
       {props.todo.task}
     </li>
   );

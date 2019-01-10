@@ -1,0 +1,22 @@
+.form {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  padding: 1rem;
+  font-size: 2rem;
+  flex-grow: 4;
+}
+
+button {
+  padding: 1rem;
+  font-size: 2rem;
+  flex-grow: 1;
+}
+
+.todo {
+  border-bottom: 1px solid #bdbdbd;
+  padding: 10px 0;
+}

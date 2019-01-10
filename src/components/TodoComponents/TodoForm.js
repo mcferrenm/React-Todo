@@ -1,8 +1,10 @@
 import React from "react";
 
+import "./Todo.css";
+
 const TodoForm = props => {
   return (
-    <form>
+    <form className="form">
       <input
         type="text"
         placeholder="Add todo"
