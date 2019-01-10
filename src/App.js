@@ -73,13 +73,21 @@ class App extends React.Component {
     });
   };
 
+  handleFilterList = () => {
+    // control input field values
+    console.log(123);
+  };
+
   render() {
     return (
       <div className="app">
         <div className="header">
           <h2>Todo List:</h2>
           <h3>Stretch</h3>
-          <TodoSearch />
+          <TodoSearch
+            handleFilterList={this.handleFilterList}
+            searchInputText={this.state.searchInputText}
+          />
           <span role="img" className="eyes">
             👀
           </span>
