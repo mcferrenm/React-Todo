@@ -3,6 +3,8 @@ import React from "react";
 import TodoList from "./components/TodoComponents/TodoList";
 import TodoForm from "./components/TodoComponents/TodoForm";
 
+import "./app.css";
+
 const todos = [
   {
     task: "Organize Garage",
@@ -27,7 +29,7 @@ class App extends React.Component {
 
   handleChange = event => {
     this.setState({
-      inputText: event.target.value
+      [event.target.name]: event.target.value
     });
   };
 
@@ -47,16 +49,17 @@ class App extends React.Component {
   };
 
   toggleCompleted = event => {
-    const copyTodos = this.state.todosData;
-
-    copyTodos.forEach(todo => {
-      if (todo.id === parseInt(event.target.id, 10)) {
-        todo.completed = !todo.completed;
-      }
-    });
-
     this.setState({
-      todosData: copyTodos
+      todosData: this.state.todosData.map(todo => {
+        if (todo.id !== parseInt(event.target.id, 10)) {
+          return todo;
+        } else {
+          return {
+            ...todo,
+            completed: !todo.completed
+          };
+        }
+      })
     });
   };
 
@@ -71,7 +74,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="app">
         <h2>Todo List: MVP</h2>
         <TodoList
           todosData={this.state.todosData}
