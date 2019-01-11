@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Staatliches");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  font-size: 10rem;
+  color: #ffffff;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-size: 5.5rem;
+  color: #757575;
+  margin-top: -35px;
+  margin-bottom: 80px;
+}
+
+li {
+  font-size: 3rem;
+  list-style-type: none;
+}
+
+.app {
+  width: 600px;
+  margin: 50px auto;
+  border-top: 3rem solid #303f9f;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.header {
+  background: #3f51b5;
+  padding: 100px 100px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header input[type="text"] {
+  padding: 0.5rem;
+  font-size: 2rem;
+  width: 75%;
+  margin-right: 10px;
+  align-self: flex-end;
+}
+
+.body {
+  background: #ffffff;
+  position: relative;
+  padding: 20px 2rem;
+}
+
+.eyes {
+  font-size: 4rem;
+  position: relative;
+  top: 12px;
+}
